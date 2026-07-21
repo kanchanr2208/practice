@@ -1,65 +1,69 @@
-@font-face {
-    font-family: 'Aller';
-    src: url('fonts/Aller.woff2') format('woff2'),
-        url('fonts/Aller.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Source Sans Pro';
-    src: url('fonts/SourceSansPro-Regular.woff2') format('woff2'),
-        url('fonts/SourceSansPro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-.geist-pixel {
-  font-family: "Geist Pixel", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "ELSH" 0;
-}
-
-
-.playwrite-id {
-  font-family: "Playwrite ID", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-html {
-  font-size: 10px;
-  margin: 0;
-  font-family: sans-serif;
-}
-
-body {
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Typography */
-
 h1 {
-  font-size: 3.2rem;
-  font-family: "Geist Pixel", serif;
+  margin-top: 0;
 }
 
-h2 {
-  font-size: 2.4rem;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  word-spacing: 0.6rem;
-  font-family: "Playwrite ID", serif;
+form {
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #cccccc;
+  border-radius: 1em;
+}
 
+div + div {
+  margin-top: 1em;
+}
+
+label span {
+  display: inline-block;
+  text-align: right;
+}
+
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999999;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: black;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+}
+
+fieldset {
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999999;
+}
+
+button {
+  margin-top: 20px;
+}
+
+label {
+  display: inline-block;
+}
+
+p label {
+  width: 100%;
 }

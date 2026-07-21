@@ -6,27 +6,65 @@
     <title>Practice</title>
     <script src="script.js" defer></script>
     <link href="style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet">
 </head>
 <body>
-     <h1>Hipster ipsum is the best</h1>
-
-    <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&amp;B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&amp;B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-
-    <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
-
-    <h2>It is the quaintest</h2>
-
-    <p>Bespoke green juice aesthetic leggings DIY williamsburg selvage. Bespoke health goth tote bag, fingerstache venmo ennui thundercats butcher trust fund cardigan hella. Wolf vinyl you probably haven't heard of them taxidermy, ugh quinoa neutra meditation asymmetrical mixtape church-key kitsch man bun occupy. Knausgaard butcher raw denim ramps, offal seitan williamsburg venmo gastropub mlkshk cardigan chillwave chartreuse single-origin coffee twee. Ethical asymmetrical banjo typewriter fap. Polaroid waistcoat tousled selfies four dollar toast locavore thundercats. Truffaut post-ironic skateboard trust fund.</p>
-
-    <h2>No, really...</h2>
-
-    <p>Trust fund celiac farm-to-table PBR&amp;B. Brunch art party mumblecore, fingerstache cred echo park literally stumptown humblebrag chambray. Mlkshk vinyl distillery humblebrag crucifix. Mustache craft beer put a bird on it, irony deep v poutine ramps williamsburg heirloom brooklyn.</p>
-
-    <p>Taxidermy tofu YOLO, sustainable etsy flexitarian art party stumptown portland. Ethical williamsburg retro paleo. Put a bird on it leggings yuccie actually, skateboard jean shorts paleo lomo salvia plaid you probably haven't heard of them.</p>
-
+    <form action="/index.html" method="post">
+        <h1>Payment form</h1>
+        <p>Please complete all required (*) fields.</p>
+        <section>
+            <h2>Contact Information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" id="ace">
+                            <label for="ace">Ace</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="king">
+                            <label for="king">King</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="queen">
+                            <label for="queen">Queen</label>
+                        </li>
+                    </ul>           
+            </fieldset>
+            <p>
+                <label for="name">Name*:</label>
+                <input id="name" type="text" required>
+            </p>
+            <p>
+                <label for="email">Email*:</label>
+                <input id="email" type="email" required>
+            </p>
+            <p>
+                <label for="password">Password*:</label>
+                <input id="password" type="password" required>
+            </p>
+        </section>
+        <section>
+            <h2>Payment Information</h2>
+            <p>
+                <label for="card">Card Type:</label>
+                <select id="card" name="card">
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="card-number">Card Number*:</label>
+                <input id="card-number" name="card-number" type="tel" required>
+            </p>
+            <p>
+                <label for="expiration-date">Expiration Date*:</label>
+                <input id="expiration-date" name="expiration-date" type="text" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" required>
+            </p>
+        </section>
+        <section>
+            <button type="submit">Validate the payment</button>
+        </section>
+    </form>
 </body>
 </html>
