@@ -1,69 +1,115 @@
-h1 {
-  margin-top: 0;
+@font-face {
+  font-family: "handwriting";
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-ul {
+@font-face {
+  font-family: "typewriter";
+  src:
+    url("fonts/momot___-webfont.woff2") format("woff2"),
+    url("fonts/momot___-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  background: #222222;
 }
 
 form {
+  position: relative;
+  width: 740px;
+  height: 498px;
   margin: 0 auto;
-  width: 400px;
   padding: 1em;
-  border: 1px solid #cccccc;
-  border-radius: 1em;
+  box-sizing: border-box;
+  background: white url("background.jpg");
+
+  /* we create our grid */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
 }
 
-div + div {
-  margin-top: 1em;
+h1 {
+  font:
+    1em "typewriter",
+    monospace;
+  align-self: end;
 }
 
-label span {
-  display: inline-block;
-  text-align: right;
+#message {
+  grid-row: 1 / 5;
+}
+
+#from,
+#reply {
+  display: flex;
+}
+
+label {
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 
 input,
 textarea {
-  font: 1em sans-serif;
-  width: 250px;
-  box-sizing: border-box;
-  border: 1px solid #999999;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
   border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+  background: none;
 }
 
 input:focus,
 textarea:focus {
-  border-color: black;
+  background: rgb(0 0 0 / 10%);
+  border-radius: 5px;
 }
 
 textarea {
-  vertical-align: top;
-  height: 5em;
-  resize: vertical;
-}
+  display: block;
 
-fieldset {
-  width: 250px;
-  box-sizing: border-box;
-  border: 1px solid #999999;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 100%;
+  height: 90%;
+
+  border-right: 1px solid;
+
+  /* resize  : none; */
+  overflow: auto;
 }
 
 button {
-  margin-top: 20px;
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
 }
 
-label {
-  display: inline-block;
+button::after {
+  content: " >>>";
 }
 
-p label {
-  width: 100%;
+button:hover,
+button:focus {
+  background: black;
+  color: white;
 }
