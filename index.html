@@ -8,6 +8,40 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    Yo
+    <form>
+        <fieldset>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" placeholder="name@domain.tld">
+            <p><span id="name">name</span><span id="at-the-rate">@</span><span id="domain">domain</span><span id="dot">.</span><span id="tld">tld</span></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="countries">Select your Country</label>
+            <select name="countries" id="countries"></select> <!-- Options created using JavaScript -->
+            <br>
+            <br>
+            <label for="postal-code">Enter Postal Code:</label>
+            <input type="text" id="postal-code">
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password">
+            <div>
+                <p>Atleast 1 small alphabet</p>
+                <p>Atleast 1 capital alphabet</p>
+                <p>Atleast 1 number</p>
+                <p>Atleast 1 symbol (Safe Symbols)</p>
+                <p>Minimum 6 characters</p>
+                <p>Maximum 10 characters</p>
+            </div>
+            <br>
+            <br>
+            <label for="repeat-password">Re-enter Password: </label>
+            <input type="password" id="repeat-password">
+        </fieldset>
+
+        
+    </form>
 </body>
 </html>
